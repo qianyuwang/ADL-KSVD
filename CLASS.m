@@ -15,8 +15,8 @@ for id=1:size(Y,2);
     get_h=W*get_x;
     get_hs=[get_hs,get_h];
     right_h=H(:,id);
-    [numc,placec]=max(get_h);
-    [numr,placer]=max(right_h);
+    [numc,placec]=max(get_h); %class prediction
+    [numr,placer]=max(right_h); % real class
     if(placec~=placer)
         err=err+1;
     end
